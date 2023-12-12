@@ -57,3 +57,10 @@ document.querySelector("#counter1").appendChild(counter1)
 document.querySelector("#counter2").appendChild(counter2)
 document.querySelector("#counter3").appendChild(counter3)
 document.querySelector("#counter4").appendChild(counter4)
+
+// Det er og mulig å gjøre dette mer fleksibelt med data-attributter, lister og løkker
+const counterRoots = document.querySelectorAll("[data-counter]")
+for (let element of counterRoots) {
+  let initialCount = element.dataset.counter
+  element.appendChild(createCounter(initialCount))
+}
