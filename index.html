@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="styling/typography.css">
+  <link rel="stylesheet" href="styling/palettes.css">
+  <link rel="stylesheet" href="styling/style.css">
+
+  <link rel="icon" href="favicon.svg">
+
+  <link rel=" preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+  <script defer src="scripts/main.js"></script>
+  <script defer src="scripts/counter.js"></script>
+
+  <title>DOM Manipulasjon</title>
+</head>
+
+<body class="flex flex-col min-h-screen bg-primary text-black">
+  <header class="bg-secondary text-primary flex justify-between items-center px-md py-sm">
+    <a href="/"><img src="favicon.svg" width="30px" height="30px" alt=""></a>
+    <h1 class="text-center">DOM Manipulasjon</h1>
+  </header>
+
+  <main class="grow mx-auto">
+
+    <section>
+
+      <h2>Kode Eksempel</h2>
+
+      <div id="counter1"></div>
+      <div id="counter2"></div>
+      <div id="counter3"></div>
+      <div id="counter4"></div>
+
+    </section>
+
+    <section>
+      <h2>DOM Navigasjon</h2>
+      <img src="docs/dom-counter.svg" alt="" style="max-height: 200px;">
+    </section>
+
+    <section id="test2"></section>
+
+
+  </main>
+
+  <footer class="bg-secondary text-primary py-lg">
+    <p class="text-center">Kodeloftet</p>
+  </footer>
+
+</body>
+
+</html>
