@@ -1,4 +1,4 @@
-function createCounter(initialCount, insertionPoint) {
+function createCounter(initialCount) {
   // HTLM for elementet vårt
   let templateCounter = `
     <p>Antall: <span>${initialCount}</span></p>
@@ -44,16 +44,16 @@ function createCounter(initialCount, insertionPoint) {
   decrementButton.addEventListener("click", decrement)
   resetButton.addEventListener("click", reset)
 
-  // Setter hele elementet vårt inn i dokumentet
-  insertionPoint.appendChild(counter)
+  // Returner elementet og la den som kaller på det bestemme hva som skal gjøres videre
+  return counter
 }
 
-let counter1 = document.querySelector("#counter1")
-let counter2 = document.querySelector("#counter2")
-let counter3 = document.querySelector("#counter3")
-let counter4 = document.querySelector("#counter4")
+let counter1 = createCounter(0)
+let counter2 = createCounter(0)
+let counter3 = createCounter(0)
+let counter4 = createCounter(0)
 
-createCounter(0, counter1)
-createCounter(0, counter2)
-createCounter(0, counter3)
-createCounter(0, counter4)
+document.querySelector("#counter1").appendChild(counter1)
+document.querySelector("#counter2").appendChild(counter2)
+document.querySelector("#counter3").appendChild(counter3)
+document.querySelector("#counter4").appendChild(counter4)
